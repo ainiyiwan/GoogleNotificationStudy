@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
          * notification service can fire it on our behalf.
          */
         Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("http://developer.android.com/reference/android/app/Notification.html"));
+                Uri.parse("https://www.baidu.com/"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
         // END_INCLUDE(build_action)
 
@@ -98,4 +98,46 @@ public class MainActivity extends Activity {
         notificationManager.notify(NOTIFICATION_ID, builder.build());
         // END_INCLUDE(send_notification)
     }
+
+    /**
+     * 自己动手敲一遍
+     */
+    public void sendNotification() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+        builder.setSmallIcon(R.drawable.ic_stat_notification);
+        builder.setContentIntent(pendingIntent);
+        builder.setAutoCancel(true);
+        builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher));
+        builder.setContentTitle("");
+        builder.setContentText("");
+        builder.setSubText("");
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

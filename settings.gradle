@@ -1,1 +1,1 @@
-include ':android-BasicNotifications'
+include ':android-BasicNotifications', ':android-ActiveNotifications'
